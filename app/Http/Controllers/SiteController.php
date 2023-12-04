@@ -45,12 +45,31 @@ class SiteController extends Controller
 
     public function ex2()
     {
-        $numero = 1;
 
-        $url = 'https://i.pravatar.cc/150?img=' . $numero;
+        $url = 'https://i.pravatar.cc/150?img=';
 
         $data['url'] = $url;
 
         return view('ex2', $data);
+    }
+
+    public function incluir()
+    {
+        return view('include');
+    }
+
+    public function components()
+    {
+        return view('comp');
+    }
+
+    public function layout()
+    {
+        return view('site');
+    }
+
+    public function layout2()
+    {
+        return view('site2');
     }
 }

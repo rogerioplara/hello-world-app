@@ -9,13 +9,17 @@
 </head>
 
 <body>
-    <div style="display: flex;">
+    <div
+        style="
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        ">
         @for ($i = 1; $i <= 50; $i++)
-            @component('components.ex2comp')
-                @slot('img')
-                    {{ $url . $i }}
-                @endslot
-            @endcomponent
+            <div style="width: 150px; height: 150px;">
+                <img src="{{ $url . $i }}">
+            </div>
         @endfor
     </div>
 </body>
