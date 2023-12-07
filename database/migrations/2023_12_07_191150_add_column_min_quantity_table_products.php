@@ -13,9 +13,12 @@ return new class extends Migration
     {
         /*
         Para fazer a alteração em uma tabela que já existe, é necessário fazer:
-        Criar o schema da tabela em uma nova migration, geralmente nominada alter_nomeTabela_table
+        Criar o schema da tabela em uma nova migration.
         Criar a função Schema::table e inserir os dados normalmente como se fosse uma nova migration normal
         escolher com o after(); o local da coluna
+
+        a nomenclatura seria o basicamente o comando sql
+        "php artisan make:migration add_column_min_quantity_table_products"
         
         dar o dropcolumn nessa mesma coluna que está criando no down()
 
